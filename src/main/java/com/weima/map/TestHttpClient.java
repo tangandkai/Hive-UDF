@@ -70,9 +70,9 @@ public class TestHttpClient {
         BufferedReader br = null;
         String result = null;// 返回结果字符串
 
-        String paramsStr = "callback=renderReverse&location="+la+","+lon+"&output=json&pois=1&ak=cMcpk3GvGD9a7LGFLtcfwp5ebeqI7jiV";
+        String paramsStr = "callback=renderReverse&location="+la+","+lon+"&output=json&pois=1&ak=xxxxxx";
 //        System.out.println("paramsStr="+paramsStr);
-        String wholeStr = new String("/geocoder/v2/?" + paramsStr + "2NsKeY52ZWsowkCCZ0qn2vT2td9xEYsj");
+        String wholeStr = new String("/geocoder/v2/?" + paramsStr + "xxxxxxx");
         String tempStr = URLEncoder.encode(wholeStr, "UTF-8");
         //获取sn校验
         String sn = MD5(tempStr);
@@ -80,7 +80,7 @@ public class TestHttpClient {
         try {
             // 创建远程url连接对象
             URL url = new URL("http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&" +
-                    "location=" + la + "," + lon + "&output=json&pois=1&ak=cMcpk3GvGD9a7LGFLtcfwp5ebeqI7jiV&sn="+sn);
+                    "location=" + la + "," + lon + "&output=json&pois=1&ak=xxxxxxxx&sn="+sn);
             // 通过远程url连接对象打开一个连接，强转成httpURLConnection类
             connection = (HttpURLConnection) url.openConnection();
             // 设置连接方式：get
